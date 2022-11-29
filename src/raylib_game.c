@@ -52,8 +52,8 @@ typedef enum {
 static const int screenWidth = 256;
 static const int screenHeight = 256;
 
-static unsigned int screenScale = 1; 
-static unsigned int prevScreenScale = 1;
+static unsigned int screenScale = 2; 
+static unsigned int prevScreenScale = 2;
 
 static RenderTexture2D target = { 0 };  // Initialized at init
 
@@ -76,6 +76,7 @@ int main(void)
     // Initialization
     //--------------------------------------------------------------------------------------
     InitWindow(screenWidth, screenHeight, "raylib 9yr gamejam");
+    SetWindowSize(screenWidth*screenScale, screenHeight*screenScale);
     
     // TODO: Load resources / Initialize variables at this point
     
